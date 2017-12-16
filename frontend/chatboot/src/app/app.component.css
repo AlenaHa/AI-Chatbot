@@ -1,0 +1,12 @@
+.main-container{
+    background-color: rgba(23, 50, 73, 0.8);
+    width: 100%;
+    height: 90vh;
+    overflow-y: hidden;
+}
+
+.footer-container{
+    background-color: rgba(23, 50, 73, 1);
+    width: 100%;
+    height: 10vh;
+}

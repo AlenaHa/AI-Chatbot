@@ -10,6 +10,7 @@ import { MenuComponent } from './components/menu-component/menu.component';
 import { ProfileComponent } from './components/profile-component/profile.component';
 import { ChatroomComponent } from './components/chatroom-component/chatroom.component';
 import { RegisterComponent } from './components/register-component/register.component';
+import { ButtonsModule } from 'ngx-bootstrap';
 
 @NgModule({
   /*declaram componentele facute*/
@@ -27,7 +28,8 @@ import { RegisterComponent } from './components/register-component/register.comp
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
-    routing
+    routing,
+    ButtonsModule.forRoot()
   ],
   /* aici vom declara serviciile*/
   providers: [],
