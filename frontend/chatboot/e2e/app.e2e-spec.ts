@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('chatboot App', () => {
+describe('chatbot App', () => {
   let page: AppPage;
 
   beforeEach(() => {
