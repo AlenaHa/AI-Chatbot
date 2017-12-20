@@ -1,0 +1,105 @@
+$font-color: white;
+
+.pictures-container {
+    height: 100%;
+}
+
+.chatbot-container {
+    height: 100%;
+    display:flex; 
+    align-items:center;
+    justify-content: center;
+    padding: 100px;
+    padding-right: 400px;
+}
+
+.chat {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar { display: none; }
+
+    &-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }    
+
+    .message-wrap{
+        display: flex;
+        min-height: 92px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+        
+        .message {
+            padding: 15px;
+            min-width: 300px;
+            height: 100%;
+            align-self: center;
+            color: $font-color;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+
+        .photo {
+            padding: 5px;
+            display: block;
+            border: 1px solid white;
+            border-radius: 50%;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: white;         
+            }
+        }
+
+        &.bot {
+            align-self: flex-start;
+            .message { 
+                margin-right: 20px;
+                margin-left: 15px;
+                background-color: rgb(23, 50, 73);              
+            }
+        }
+
+        &.user { 
+            align-self: flex-end;
+            .message {
+                margin-right: 15px;
+                margin-left: 20px;
+                background-color: rgba(240, 241, 241, 0.5);
+            }
+        }
+    }
+}    
+
+.write-message {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(240, 241, 241, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    
+    .write {
+        padding: 10px;
+        flex-grow: 1;
+        &::placeholder { color: $font-color; }
+        background-color: transparent;
+        border: none;
+    }
+
+    .send{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        transition: all .2s ease;
+        &:hover { transform: scale(1.2); }
+    }
+}
