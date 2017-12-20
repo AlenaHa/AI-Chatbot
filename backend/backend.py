@@ -7,7 +7,7 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 # Utility function for the connection to the db
-def connect(user, password, db, host='localhost', port=5432):
+def connect(user, password, db, host='dbpostgres', port=5432):
 
     url = 'postgresql://{}:{}@{}:{}/{}'
     url = url.format(user, password, host, port, db)
@@ -21,7 +21,9 @@ def connect(user, password, db, host='localhost', port=5432):
     return con, meta
 
 # Connect to the db
-connection, metadata = connect('postgres','admin', 'postgres', host='localhost',port=5432 )
+
+# While could not connect (because of host not found - which means docker image might not be running yet, sleep 1 second, retry)
+connection, metadata = connect('postgres','admin', 'postgres', host='dbpostgres',port=5432)
 
 
 
@@ -49,3 +51,5 @@ api.add_resource(User_Mail, '/users/username/<user_name>')  # Get the email addr
 api.add_resource(Answer, '/answer')  # Get the email address for a given existing user
 
 
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
