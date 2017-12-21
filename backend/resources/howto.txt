@@ -1,0 +1,17 @@
+
+***Steps to run rest api:
+
+1. Install the flask lib
+    pip install flask flask-jsonpify flask-sqlalchemy flask-restful
+2. Install psycopg2
+    pip install psycopg2
+3. Install the postgre db server and a client(pgAdmin4)
+    3.1 Let the basic username postgres and add the password admin(if you prefer other options you must change the connection properties from backend.py file
+
+4. Run: pip install psycopg2 sqlalchemy
+
+5. Create a table called users and add as fields: username, password and email
+
+6. Open a cmdline in the backend directory and run
+    6.1 set FLASK_APP=backend.py
+    6.2 flask run
