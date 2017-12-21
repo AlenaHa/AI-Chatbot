@@ -1,8 +1,11 @@
+.app-container {
+    overflow: hidden;
+}
+
 .main-container{
-    background-color: rgba(23, 50, 73, 0.8);
+    background-color: rgba(23, 50, 73, 0.9);
     width: 100%;
-    height: 90vh;
-    overflow-y: hidden;
+    height: 90vh; 
 }
 
 .footer-container{
