@@ -5,6 +5,7 @@ import argparse
 
 import cbot
 from cbot import utils
+from cbot.core import crawler
 
 
 log = utils.get_logger(__name__)
@@ -18,6 +19,14 @@ def run_func(_):
     )
 
 
+def crawl_func(args):
+    Crawler = crawler.CRAWLERS[args.crawler]
+    crawl = Crawler()
+    defs = crawl.get_defs(args.word, limit=args.limit)
+    for idx, string in enumerate(defs):
+        print("{:>3}. {}".format(idx, string))
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="AI chatbot."
@@ -29,6 +38,26 @@ def main():
         help="run the server with Flask"
     )
     run_parser.set_defaults(func=run_func)
+
+    crawl_parser = subparsers.add_parser(
+        "crawl",
+        help="crawl the web for definitions"
+    )
+    crawl_parser.add_argument(
+        "word", metavar="WORD",
+        help="word to search for"
+    )
+    crawl_parser.add_argument(
+        "-c", "--crawler", metavar="NAME",
+        choices=crawler.CRAWLERS.keys(), required=True,
+        help="set the crawler to scan with"
+    )
+    crawl_parser.add_argument(
+        "-l", "--limit", metavar="NUMBER",
+        type=int, default=1,
+        help="search at most N terms"
+    )
+    crawl_parser.set_defaults(func=crawl_func)
 
     args = parser.parse_args()
     try:
