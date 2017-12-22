@@ -16,6 +16,10 @@ PROJECT = os.path.normpath(
 # Relative paths only.
 ETC = os.path.join("etc", "cbot")
 
+# Crawler parsing and settings.
+HTML_PARSER = "html5lib"
+TIMEOUT = 10
+
 # Server settings.
 HOST = "0.0.0.0"
 PORT = 8080

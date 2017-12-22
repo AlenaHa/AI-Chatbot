@@ -42,3 +42,17 @@ def get_logger(name, use_logging=settings.LOGGING, debug=settings.DEBUG):
         level = level if use_logging else logging.CRITICAL
         log.setLevel(level)
     return log
+
+
+class Logger(object):
+
+    """Simple base class offering logging support."""
+
+    def __init__(self, logging=settings.LOGGING, debug=settings.DEBUG):
+        """Log information using the `log` method.
+
+        :param bool logging: enable logging or not
+        :param bool debug: enable debugging messages
+        """
+        super(Logger, self).__init__()
+        self.log = get_logger(__file__, use_logging=logging, debug=debug)
