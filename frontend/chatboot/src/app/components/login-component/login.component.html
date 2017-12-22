@@ -1,1 +1,46 @@
-<h1>Login pentru Chatbot</h1>
+<div class="container">
+    <div class="col-lg-2 hidden-sm hidden-md bookshelf">
+        <img src="../../../assets/svg-images/bookshelf.svg">
+        <img src="../../../assets/svg-images/doctor-animation.gif" id="doctor">
+    </div>
+    <div class="col-md-2 col-sm-12 login-container">
+        <div class="title-container">
+            <h1 class="main-title">Bine ai venit!</h1>
+            <h3 class="subtitle">Eu sunt Dr. Dre. Ne cunoastem?</h3>
+        </div>
+
+        <div class="login-form">
+            <div class="back-card"></div>
+            <div class="front-card">
+                <div class="top-card-container">
+                    <h3 class="form-title">Autentificare</h3>
+                    <button class="register-button" (click) = "redirectOnRegister()">+</button>
+                </div>
+
+                <form class="middle-card-container" id="form">
+                    <div class="input-container">
+                        <input type="text" id="email" required/>
+                        <label for="email">Utilizator</label>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="password" required/>
+                        <label for="password">Parola</label>
+                        <div class="bar"></div>
+                    </div>
+                </form>
+
+                <div class="bottom-card-container">
+                    <div class="button-container">
+                        <button type="submit" value="Submit" form="form" (click) = "redirectOnChat()">Hai sa invatam!</button>
+                    </div>
+                    <div class="forgot-passwd-container"><a class="forgot-passwd" href="#" >Am uitat parola</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-2 hidden-sm hidden-md pictures">
+        <img src="../../../assets/svg-images/pictures.svg">
+    </div>
+</div>

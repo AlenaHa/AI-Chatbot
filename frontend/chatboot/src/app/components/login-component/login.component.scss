@@ -1,0 +1,272 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .login-container {
+        width: 100vh;
+        height: 90vh;
+        margin: 0 auto;
+        display: block;
+        padding-top: 2em;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 20%;
+    }
+
+    .main-title {
+        color: #fafafa;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        margin-top: auto;
+    }
+
+    .subtitle {
+        color: #fafafa;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 0 auto;
+    }
+
+    .login-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70%;
+        width: 100%;
+    }
+
+    .back-card, .front-card {
+        height: 85%;
+        width: 65%;
+        background-color: #DDDDDD;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08), 0 6px 6px rgba(0,0,0,0.08);
+        border-radius: 2px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .front-card {
+        background-color: #F4F4F4;
+        z-index: 10;
+        margin-left: -85%;
+        margin-top: 2%;
+    }
+
+    .top-card-container {
+        width: 100%;
+        height: 20%;
+    }
+
+    .middle-card-container {
+        width: 100%;
+        height: 45%;
+    }
+
+    .bottom-card-container {
+        width: 100%;
+        height: 20%;
+    }
+
+    .form-title {
+        color: #78ABCE;
+        font-size: 18px;
+        text-align: left;
+        font-weight: bold;
+        padding-left: 20px;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border-left: 5px solid #78ABCE;
+        float: left;
+    }
+
+    .register-button {
+        float: right;
+        border-radius: 50%;
+        border: 2px solid #78ABCE;
+        background: #78ABCE;
+        color: white;
+        padding: 5px 18px 5px 18px;
+        font-size: 30px;
+        outline: none;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .input-container {
+        position: relative;
+        margin-left: 25px;
+        margin-right: 45px;
+        margin-top: 10px;
+    }
+
+    .input-container input {
+        outline: none;
+        z-index: 1;
+        position: relative;
+        background: none;
+        width: 100%;
+        height: 60px;
+        border: 0;
+        color: #424242;
+        font-size: 17px;
+        font-weight: 400;
+      }
+
+    .input-container input:focus ~ label {
+        color: #BDBDBD;
+        -webkit-transform: translate(-12%, -50%) scale(0.75);
+                transform: translate(-12%, -50%) scale(0.75);
+    }
+
+    .input-container input:focus ~ .bar:before, .input-container input:focus ~ .bar:after {
+        width: 50%;
+    }
+
+    .input-container input:valid ~ label {
+        color: #9d9d9d;
+        -webkit-transform: translate(-12%, -50%) scale(0.75);
+                transform: translate(-12%, -50%) scale(0.75);
+    }
+
+    .input-container label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #BDBDBD;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 60px;
+        -webkit-transition: 0.2s ease;
+        transition: 0.2s ease;
+      }
+
+    .input-container .bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #BDBDBD;
+        width: 100%;
+        height: 1px;
+    }
+
+    .input-container .bar:before, .input-container .bar:after {
+        content: '';
+        position: absolute;
+        background: #78ABCE;
+        width: 0;
+        height: 3px;
+        -webkit-transition: .2s ease;
+        transition: .2s ease;
+    }
+
+    .input-container .bar:before {
+        left: 50%;
+    }
+
+    .bookshelf, .pictures {
+        height: 100%;
+        margin-top: 20%;
+    }
+
+    .input-container .bar:after {
+        right: 50%;
+    }
+
+    .button-container {
+        text-align: center;
+        bottom: 0;
+    }
+
+    .button-container button {
+        outline: 0;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        background: 0;
+        border: 2px solid #78ABCE;
+        padding: 15px 30px 15px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        overflow: hidden;
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+        color: #78ABCE; 
+    }
+
+    .button-container button:hover {
+        color: white;
+        background: #78ABCE;
+    }
+
+    .forgot-passwd-container {
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .forgot-passwd {
+        font-size: 16px;
+        color: #BDBDBD;
+        text-transform: none;
+        text-decoration: none;
+    }
+
+    .forgot-passwd:hover {
+        color: #9E9E9E;
+    }
+
+    #doctor {
+        height: 75%;
+        bottom: 15%;
+        left:60%;
+        position: absolute;
+    }
+
+    @media screen and (max-width: 767px) {
+        .login-container {
+            padding: 0 !important;
+            margin: 0;
+        }
+
+        .bookshelf, .pictures, #doctor {
+            padding: 0;
+        }
+
+        #doctor {
+            bottom: 5%;
+        }
+
+        .back-card, .front-card {
+            width: 90%;
+        }
+
+        .front-card {
+            margin-left: -100%;
+        }
+    }
+
+
+    @media screen and (max-width: 1024px) {
+        .bookshelf, .pictures, #doctor {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        #doctor {
+            display: none;
+        }
+    }
+}
