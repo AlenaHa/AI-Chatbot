@@ -15,7 +15,7 @@
         <hr>
         <div class="information-container">
             <span>
-                <label for="nume">Nume</label>
+                <label for="nume">Nume:</label>
                 <input *ngIf="editIsDisabled" 
                         type="text" 
                         id="nume" 
@@ -24,7 +24,7 @@
                 <p *ngIf="!editIsDisabled">{{user.name}}</p>
             </span>
             <span>
-                <label for="prenume">Prenume</label>
+                <label for="prenume">Prenume:</label>
                 <input *ngIf="editIsDisabled" 
                         type="text"
                         id="prenume"
@@ -33,7 +33,7 @@
                 <p *ngIf="!editIsDisabled">{{user.lastname}}</p>
             </span>
             <span>
-                <label for="facultate">Facultate</label>
+                <label for="facultate">Facultate:</label>
                 <input *ngIf="editIsDisabled" 
                         type="text" 
                         id="facultate"
@@ -42,31 +42,27 @@
                 <p *ngIf="!editIsDisabled">{{user.faculty}}</p>
             </span>
             <span>
-                <label for="an">An</label>
+                <label for="an">An:</label>
                 <input *ngIf="editIsDisabled" 
                         type="text" 
                         id="an" 
                         name="an"
-                         value={{user.yearFaculty}}>
+                        value={{user.yearFaculty}}>
                 <p *ngIf="!editIsDisabled">{{user.yearFaculty}}</p>
             </span>
-            <div class="icons">
-                <span>
-                    Sterge informatiile
-                    <i class="delete fa fa-trash-o" 
-                        aria-hidden="true"
-                        (click)="deleteProfileInformation()">
-                    </i>
-                </span>
-                <div>
-                    <span>
-                        Editeaza informatiile
-                        <i class="edit fa fa-pencil" 
-                           aria-hidden="true"
-                           (click)="editProfileInformation()"></i>  
-                    </span>
-                </div>
-            </div>
+        </div>
+        <div class="icons">
+            <span>
+                <i class="delete fa fa-trash-o" 
+                    aria-hidden="true"
+                    (click)="deleteProfileInformation()">
+                </i>
+            </span>
+            <span>
+                <i class="edit fa fa-pencil" 
+                   aria-hidden="true"
+                   (click)="editProfileInformation()"></i>  
+            </span>
         </div>
       </div>
   </div>

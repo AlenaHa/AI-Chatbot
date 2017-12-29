@@ -1,20 +1,46 @@
-/deep/ .bg-secondary {
-    background-color: #173249!important;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(23, 50, 73, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-/deep/ .navbar-dark .navbar-nav .nav-link {
-    color: #ffffff;
-}
-
-.nav-link {
-    font-size: 20px;
-}
-
-.nav-item{
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F4F4F4;
+    display: block;
+    transition: 0.3s;
     margin-top: 15px;
-    margin-left: 30px;
+    cursor: pointer;
 }
 
-.navbar {
-    border-radius: 0;
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.open-menu{
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
