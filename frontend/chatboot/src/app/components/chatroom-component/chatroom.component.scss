@@ -58,64 +58,10 @@ $font-color: white;
         display: flex;
         flex-direction: column;
     }
-
-    .message-wrap{
-        display: flex;
-        min-height: 2px;
-
-        &:not(:last-of-type) {
-            margin-bottom: 10px;
-        }
-
-        .message {
-            padding: 7px;
-            min-width: 400px;
-            height: 50%;
-            align-self: center;
-            color: $font-color;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08), 0 6px 6px rgba(0,0,0,0.08);
-        }
-
-        .photo {
-            padding: 5px;
-            display: block;
-            border: 1px solid white;
-            border-radius: 60%;
-
-          img {
-                padding-bottom: 10px;
-                padding-top: 5px;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background-color: white;
-            }
-        }
-
-        &.bot {
-            align-self: flex-start;
-            padding-right: 100px;
-            .message {
-                margin-right: 20px;
-                margin-left: 15px;
-                background-color: rgb(23, 50, 73);
-            }
-        }
-
-        &.user {
-            align-self: flex-end;
-            padding-left: 100px;
-            .message {
-                margin-right: 15px;
-                margin-left: 20px;
-                background-color: rgba(240, 241, 241, 0.5);
-            }
-        }
-    }
 }
 
 .write-message {
-    width: 100%;
+    min-width: 543px;
     height: 50px;
     background-color: rgba(240, 241, 241, 0.5);
     display: flex;
@@ -128,6 +74,7 @@ $font-color: white;
         &::placeholder { color: $font-color; }
         background-color: transparent;
         border: none;
+        outline: none;
     }
 
     .send{
