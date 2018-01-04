@@ -1,0 +1,9 @@
+<div *ngIf="user === 'human'" class="message-wrap user" (click)="ceva()">
+  <div class="message">{{text}}</div>
+  <div class="photo"><img src="../../../assets/svg-images/user-chat-head.svg"></div>
+</div>
+
+<div *ngIf="user === 'bot'" class="message-wrap bot">
+  <div class="photo"><img src="../../../assets/svg-images/doctor-chat-head.svg"></div>
+  <div class="message">{{text}}</div>
+</div>
