@@ -34,7 +34,7 @@
             display: none;
         }
         .custom-file-upload {
-            border: 1px solid #ccc;
+            border: 1px solid rgba(23, 50, 73, 0.2);
             display: inline-block;
             padding: 6px 12px;
             cursor: pointer;
@@ -61,7 +61,7 @@
             img{
                 overflow: hidden;
                 height: 50px;
-                width: 50px;
+                width: 90px;
                 margin-left: 10px;
             }
         }
@@ -106,12 +106,13 @@
 
             .delete:hover{
                 color: red;
-                margin-right: 10px;
             }
             .edit:hover{
                 color: green;
             }
-
+            .save:hover{
+                color: green;
+            }
             i{
                 font-size: 20px;
                 margin-left: 10px;

@@ -10,9 +10,9 @@ export class ProfileComponent implements OnInit {
 
   private user: User;
   private editIsDisabled: boolean;
-
+  
   ngOnInit() {
-    this.user = new User('Ecaterina','Manolache','UMF Iasi','3');
+    this.user = new User('Prenume','Nume','UMF Iasi','3');
     this.editIsDisabled = false;
   }
 
@@ -25,6 +25,10 @@ export class ProfileComponent implements OnInit {
 
   private editProfileInformation(): void{
     this.editIsDisabled = true;
+  }
+
+  private saveInformation():void{
+    this.editIsDisabled = false;
   }
 
 }

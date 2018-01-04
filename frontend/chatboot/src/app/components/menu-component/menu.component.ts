@@ -13,7 +13,7 @@ export class MenuComponent {
   document.getElementById("mySidenav").style.width = "250px";
   }
 
-closeNav():void {
+ closeNav():void {
   document.getElementById("mySidenav").style.width = "0";
   }
 

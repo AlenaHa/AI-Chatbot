@@ -1,10 +1,13 @@
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <a (click)="route(1)">ChatRoom</a>
-    <a (click)="route(2)">Profilul meu</a>
-    <a (click)="route(3)">Logout
-        <i class="fa fa-sign-out" aria-hidden="true"></i>
-    </a>
+    <div class="menu-tiles">
+        <a (click)="route(1)">ChatRoom</a>
+        <a (click)="route(2)">Profilul meu</a>
+        <a (click)="route(3)">Logout
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+    </div>
+    <img src="../../../assets/svg-images/logo-profile.svg">
 </div>
 <div class="open-menu" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</div>
  
