@@ -1,28 +1,74 @@
 <div class="container">
   <div class="profile-container">
-      <div class="photo-container">
-          <img src="../../../assets/svg-images/user.svg">
-          <button type="button" class="btn btn-primary"
-                  [(ngModel)]="singleModel" btnCheckbox
-                  btnCheckboxTrue="1" btnCheckboxFalse="0">
-                  Schimba poza            
-          </button>
-      </div>
-      <div class="right-profile-container">
-          <p class="title-profile">Profilul meu</p>
-          <div class="information-container">
-            <label for="nume">Nume</label>
-            <p>{{user.name}}</p>
-              
-            <label for="prenume">Prenume</label>
-            <p>{{user.lastname}}</p>
-
-            <label for="faculty">Facultatea</label>
-            <p>{{user.faculty}}</p>
-              
-            <label for="yearFaculty">An</label>
-            <p>{{user.yearFaculty}}</p>
-          </div>
+    <div class="photo-container hidden-xs">
+        <img src="../../../assets/svg-images/user.svg">
+        <label class="custom-file-upload">
+        <input type="file"/>
+            <i class="fa fa-cloud-upload"></i> Schimba Poza
+        </label>
+    </div>
+    <div class="right-profile-container">
+        <div class="title">
+            <p class="title-profile">Profilul meu</p>
+            <img src="../../../assets/svg-images/logo-profile.svg">
+        </div>  
+        <hr>
+        <div class="information-container">
+            <span>
+                <label for="nume">Nume:</label>
+                <input *ngIf="editIsDisabled" 
+                        type="text" 
+                        id="nume" 
+                        name="nume"
+                        value={{user.name}} >
+                <p *ngIf="!editIsDisabled">{{user.name}}</p>
+            </span>
+            <span>
+                <label for="prenume">Prenume:</label>
+                <input *ngIf="editIsDisabled" 
+                        type="text"
+                        id="prenume"
+                        name="prenume" 
+                        value={{user.lastname}}>
+                <p *ngIf="!editIsDisabled">{{user.lastname}}</p>
+            </span>
+            <span>
+                <label for="facultate">Facultate:</label>
+                <input *ngIf="editIsDisabled" 
+                        type="text" 
+                        id="facultate"
+                        name="facultate" 
+                        value={{user.faculty}}>
+                <p *ngIf="!editIsDisabled">{{user.faculty}}</p>
+            </span>
+            <span>
+                <label for="an">An:</label>
+                <input *ngIf="editIsDisabled" 
+                        type="text" 
+                        id="an" 
+                        name="an"
+                        value={{user.yearFaculty}}>
+                <p *ngIf="!editIsDisabled">{{user.yearFaculty}}</p>
+            </span>
+        </div>
+        <div class="icons">
+            <span>
+                <i class="delete fa fa-trash-o" 
+                    aria-hidden="true"
+                    (click)="deleteProfileInformation()">
+                </i>
+            </span>
+            <span>
+                <i class="edit fa fa-pencil" 
+                   aria-hidden="true"
+                   (click)="editProfileInformation()"></i>  
+            </span>
+            <span *ngIf="editIsDisabled">
+                <i class="save fa fa-check" 
+                   aria-hidden="true"
+                   (click)="saveInformation()"></i>  
+            </span>
+        </div>
       </div>
   </div>
 </div>
