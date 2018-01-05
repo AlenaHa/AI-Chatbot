@@ -1,59 +1,23 @@
-<div class="pictures-container col-md-4"></div>
-<div class="chatbot-container col-md-8">
-  <div class="chat-container">
-   
-    <div class="chat">
-      <div class="message-wrap bot">
-        <div class="photo"><img src="../../../assets/svg-images/doctor-chat-head.svg"></div>
-        <div class="message">testtttt</div>
-      </div>
-      
-      <div class="message-wrap user">
-        <div class="message">testtttt</div>
-        <div class="photo"><img src="../../../assets/svg-images/user-chat-head.svg"></div>
-      </div>
-      <div class="message-wrap bot">
-        <div class="photo"><img src="../../../assets/svg-images/doctor-chat-head.svg"></div>
-        <div class="message">testtttt</div>
-      </div>
-      
-      <div class="message-wrap user">
-        <div class="message">testtttt</div>
-        <div class="photo"><img src="../../../assets/svg-images/user-chat-head.svg"></div>
-      </div>
-      <div class="message-wrap bot">
-          <div class="photo"><img src="../../../assets/svg-images/doctor-chat-head.svg"></div>
-          <div class="message">testtttt</div>
-        </div>
-        
-        <div class="message-wrap user">
-          <div class="message">testtttt</div>
-          <div class="photo"><img src="../../../assets/svg-images/user-chat-head.svg"></div>
-        </div>
-        <div class="message-wrap bot">
-            <div class="photo"><img src="../../../assets/svg-images/doctor-chat-head.svg"></div>
-            <div class="message">testtttt</div>
-          </div>
-          
-          <div class="message-wrap user">
-            <div class="message">testtttt</div>
-            <div class="photo"><img src="../../../assets/svg-images/user-chat-head.svg"></div>
-          </div>
-          <div class="message-wrap bot">
-        <div class="photo"><img src="../../../assets/svg-images/doctor-chat-head.svg"></div>
-        <div class="message">testtttt</div>
-      </div>
-      
-      <div class="message-wrap user">
-        <div class="message">testtttt</div>
-        <div class="photo"><img src="../../../assets/svg-images/user-chat-head.svg"></div>
-      </div>
-    </div>
-    
+<div class="pictures-container col-md-4 hidden-sm hidden-md">
+  <div class="pictures"><img src="../../../assets/svg-images/pictures.svg"></div>
+  <img src="../../../assets/svg-images/doctor-animation.gif" id="doctor">
+</div>
+
+<div class="chatbot-container col-md-8 col-sm-12">
+  <div class="chatboot-container">
+
+  <div class="chat" *ngFor="let message of messageListService.messageList; let i = index" [attr.data-index]="i">
+      <app-message
+        [text]="message"
+        [user]="'human'"
+        [index]="i">
+      </app-message>
+  </div>
+
     <div class="write-message">
-      <input class="write" type="text" placeholder="Scrie un mesaj...">
-      <div class="send">
-        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      <input class="write" type="text" [(ngModel)]="textValue" placeholder="Scrie un mesaj...">
+      <div class="send" (click)="addMessage()">
+        <img src="../../../assets/svg-images/send-button.svg">
       </div>
     </div>
 

@@ -1,20 +1,51 @@
 $font-color: white;
 
+@media screen and (max-width: 1024px) {
+  .pictures-container{
+    visibility: hidden;
+  }
+  .doctor{
+    visibility: hidden;
+  }
+  .book{
+    visibility: hidden;
+  }
+
+  .chatboot-container {
+
+    padding: 30px;
+  }
+}
+
 .pictures-container {
-    height: 100%;
+  height: 75%;
+  position: relative;
+  #doctor {
+    height: 600px;
+    width: auto;
+    top: calc(100% - 90%);
+    left:60%;
+    position: absolute;
+  }
+
+  .pictures {
+    height: 200px !important;
+    width: 200px;
+    margin-left: 30%;
+    margin-top: 30%;
+  }
 }
 
 .chatbot-container {
     height: 100%;
-    display:flex; 
+    display:flex;
     align-items:center;
     justify-content: center;
-    padding: 100px;
-    padding-right: 400px;
+    padding: 10px;
 }
 
 .chat {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -22,84 +53,42 @@ $font-color: white;
     &::-webkit-scrollbar { display: none; }
 
     &-container {
-        height: 100%;
-        width: 100%;
+        height: 30%;
+        width: 30%;
         display: flex;
         flex-direction: column;
-    }    
-
-    .message-wrap{
-        display: flex;
-        min-height: 92px;
-
-        &:not(:last-of-type) {
-            margin-bottom: 10px;
-        }
-        
-        .message {
-            padding: 15px;
-            min-width: 300px;
-            height: 100%;
-            align-self: center;
-            color: $font-color;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        }
-
-        .photo {
-            padding: 5px;
-            display: block;
-            border: 1px solid white;
-            border-radius: 50%;
-
-            img {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                background-color: white;         
-            }
-        }
-
-        &.bot {
-            align-self: flex-start;
-            .message { 
-                margin-right: 20px;
-                margin-left: 15px;
-                background-color: rgb(23, 50, 73);              
-            }
-        }
-
-        &.user { 
-            align-self: flex-end;
-            .message {
-                margin-right: 15px;
-                margin-left: 20px;
-                background-color: rgba(240, 241, 241, 0.5);
-            }
-        }
     }
-}    
+}
 
 .write-message {
-    width: 100%;
-    height: 80px;
+    min-width: 543px;
+    height: 50px;
     background-color: rgba(240, 241, 241, 0.5);
     display: flex;
     justify-content: flex-end;
     align-content: center;
-    
+
     .write {
         padding: 10px;
         flex-grow: 1;
         &::placeholder { color: $font-color; }
         background-color: transparent;
         border: none;
+        outline: none;
     }
 
     .send{
-        padding: 20px;
+        padding: 2px;
         display: flex;
         align-items: center;
         transition: all .2s ease;
-        &:hover { transform: scale(1.2); }
+        &:hover { transform: scale(1.2);}
+
+      img {
+        padding-right: 10px;
+        width: 30px;
+        height: 30px;
+      }
+
     }
 }

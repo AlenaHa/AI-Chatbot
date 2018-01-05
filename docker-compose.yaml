@@ -1,0 +1,22 @@
+version: '2'
+services:
+  backend:
+    image: flask-sample-one
+    ports:
+      - "5000:5000"
+    links:
+      - dbpostgres
+    depends_on:
+      - dbpostgres
+    restart: always
+
+  dbpostgres:
+    image: postgres
+    volumes:
+      - /private/var/lib/postgresql:/var/lib/postgresql
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
