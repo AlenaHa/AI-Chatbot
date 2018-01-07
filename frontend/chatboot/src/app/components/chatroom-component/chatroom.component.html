@@ -8,8 +8,8 @@
 
   <div class="chat" *ngFor="let message of messageListService.messageList; let i = index" [attr.data-index]="i">
       <app-message
-        [text]="message"
-        [user]="'human'"
+        [text]="message.text"
+        [user]="message.user"
         [index]="i">
       </app-message>
   </div>

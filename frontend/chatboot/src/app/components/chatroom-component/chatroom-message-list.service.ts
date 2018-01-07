@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Message } from '../../models/message.model';
 
 @Injectable()
 export class ChatroomMessageListService {
-  private messageList: Array<any> = [];
+  private messageList: Array<Message> = [];
 
   public getMessageList(): any {
     return this.messageList;
