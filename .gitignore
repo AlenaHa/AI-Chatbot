@@ -93,3 +93,6 @@ page*.html
 
 *.iml
 *.xml
+
+# Merge leftovers
+*.orig
