@@ -42,6 +42,8 @@ $font-color: white;
     align-items:center;
     justify-content: center;
     padding: 10px;
+    overflow-y: scroll;
+    height: 400px;
 }
 
 .chat {
@@ -49,14 +51,15 @@ $font-color: white;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     &::-webkit-scrollbar { display: none; }
+    
 
     &-container {
         height: 30%;
         width: 30%;
         display: flex;
         flex-direction: column;
+      
     }
 }
 
