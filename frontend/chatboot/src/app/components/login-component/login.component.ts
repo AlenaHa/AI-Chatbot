@@ -7,9 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 /* fiecare componenta pe care o facem trebuie sa aibe o structura de genu
    si componenta va fi inregistrata in app.module.ts*/
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+
   constructor(private router: Router) { }
   
   redirectOnRegister(){
@@ -18,9 +20,5 @@ export class LoginComponent implements OnInit {
 
   redirectOnChat() {
     this.router.navigate(['/chatroom']);
-  }
-
-  ngOnInit() {
-    
   }
 }
