@@ -45,7 +45,7 @@ def receive_message():
 
 def pick_random_line(topic):
     if topic not in LINES:
-        print "Nu mai fi bou si scrie topicu corect"
+        print "Scrie topicul corect"
         return "Nu am inteles bine, te rog repeta"
     return choice(LINES[topic])
 
