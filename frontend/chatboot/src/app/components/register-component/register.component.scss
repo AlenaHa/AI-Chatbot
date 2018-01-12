@@ -1,0 +1,314 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    .login-container {
+        width: 100vh;
+        height: 90vh;
+        margin: 0 auto;
+        display: block;
+        padding-top: 2em;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 20%;
+    }
+
+    .main-title {
+        color: #fafafa;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        margin-top: auto;
+    }
+
+    .subtitle {
+        color: #fafafa;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 0 auto;
+    }
+
+    .login-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70%;
+        width: 100%;
+    }
+
+    .back-card, .front-card {
+        height: 55vh;
+        width: 65vh;
+        background-color: #DDDDDD;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08), 0 6px 6px rgba(0,0,0,0.08);
+        border-radius: 2px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .front-card {
+        background-color: #F4F4F4;
+        z-index: 10;
+        margin-left: -85%;
+        margin-top: 2%;
+    }
+
+    .top-card-container {
+        width: 100%;
+        height: 7vh;
+    }
+
+    .card-container {
+        width: 100%;
+        height: 55vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .inputs {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .dropdowns {
+        margin-left: 25px;
+        margin-right: 45px;
+        margin-top: 20px;
+    }
+
+    .dropdowns li {
+        list-style: none;
+    }
+
+    .dropdowns li a {
+        text-transform: none;
+        color: #BDBDBD;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .dropdowns li a:hover {
+        text-decoration: none;
+    }
+
+    .dropdowns ul {
+        display: none;
+        position: absolute;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        padding: 5px 15px 5px 15px; 
+    }
+
+    .dropdowns ul li {
+        padding-left: 0;
+        float: none;
+    }
+
+    .faculty ul li{
+        padding: 0;
+    }
+
+    .dropdowns li:hover > ul {
+        /*display: block;*/
+    }
+
+    .dropdowns .faculty, .dropdowns .year {
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        padding: 5px 15px 5px 15px;
+        border-radius: 4px;
+    }
+
+    .dropdowns .faculty {
+        float: left;
+    }
+
+    .dropdowns .year {
+        float: right;
+    }
+
+    .form-title {
+        color: #78ABCE;
+        font-size: 18px;
+        text-align: left;
+        font-weight: bold;
+        padding-left: 20px;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border-left: 5px solid #78ABCE;
+        float: left;
+    }
+
+    .input-container {
+        position: relative;
+        margin-left: 25px;
+        margin-right: 45px;
+        margin-top: 10px;
+    }
+
+    .input-container input {
+        outline: none;
+        z-index: 1;
+        position: relative;
+        background: none;
+        width: 100%;
+        height: 50px;
+        border: 0;
+        color: #424242;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+    .input-container input:focus ~ label {
+        color: #BDBDBD;
+        -webkit-transform: translate(-12%, -50%) scale(0.75);
+                transform: translate(-12%, -50%) scale(0.75);
+    }
+
+    .input-container input:focus ~ .bar:before, .input-container input:focus ~ .bar:after {
+        width: 50%;
+    }
+
+    .input-container input:valid ~ label {
+        color: #9d9d9d;
+        -webkit-transform: translate(-12%, -50%) scale(0.75);
+                transform: translate(-12%, -50%) scale(0.75);
+    }
+
+    .input-container label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #BDBDBD;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 50px;
+        -webkit-transition: 0.2s ease;
+        transition: 0.2s ease;
+      }
+
+    .input-container .bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #BDBDBD;
+        width: 100%;
+        height: 1px;
+    }
+
+    .input-container .bar:before, .input-container .bar:after {
+        content: '';
+        position: absolute;
+        background: #78ABCE;
+        width: 0;
+        height: 3px;
+        -webkit-transition: .2s ease;
+        transition: .2s ease;
+    }
+
+    .input-container .bar:before {
+        left: 50%;
+    }
+
+    .bookshelf, .pictures {
+        height: 100vh;
+        margin-top: 20vh;
+    }
+
+    .input-container .bar:after {
+        right: 50%;
+    }
+
+    .button-container {
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        max-height: 20%;
+        margin-top: auto;
+        padding-bottom: 5%;
+    }
+
+    .button-container button {
+        outline: 0;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        background: 0;
+        border: 2px solid #78ABCE;
+        padding: 10px 20px 10px 20px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1;
+        overflow: hidden;
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+        color: #78ABCE; 
+    }
+
+    .button-container button:hover {
+        color: white;
+        background: #78ABCE;
+    }
+
+    #doctor {
+        height: 75%;
+        bottom: 15%;
+        left:60%;
+        position: absolute;
+    }
+
+    @media screen and (max-width: 767px) {
+        .login-container {
+            padding: 0 !important;
+            margin: 0;
+        }
+
+        .bookshelf, .pictures, #doctor {
+            padding: 0;
+        }
+
+        #doctor {
+            bottom: 5%;
+        }
+
+        .back-card, .front-card {
+            width: 90%;
+        }
+
+        .front-card {
+            margin-left: -100%;
+        }
+
+        .dropdowns {
+            margin-top: 10px;
+        }
+
+        .card-container {
+            height: 55vh;
+        }
+    }
+
+
+    @media screen and (max-width: 1024px) {
+        .bookshelf, .pictures, #doctor {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        #doctor {
+            display: none;
+        }
+    }
+}

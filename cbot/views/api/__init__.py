@@ -3,6 +3,7 @@
 
 from . import (
     profiles,
+    chat,
 )
 from .base import ERRORS, URL_PREFIX
 from ... import api
@@ -36,4 +37,11 @@ api.add_resource(
     profiles.ProfileResource,
     "{}/<profile_usafe>".format(profiles.URL_PREFIX),
     endpoint=profiles.ProfileResource.ENDPOINT
+)
+
+# For chat.
+api.add_resource(
+    chat.ChatResource,
+    chat.URL_PREFIX,
+    endpoint=chat.ChatResource.ENDPOINT
 )
