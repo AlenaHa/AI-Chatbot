@@ -83,6 +83,23 @@ like these:
 }
 ```
 
+Or even chat with the bot:
+
+```bat
+> curl -i http://localhost:8080/api/chat?message=ana+are+mere
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 73
+Server: Werkzeug/0.14.1 Python/2.7.14
+Date: Thu, 11 Jan 2018 22:49:03 GMT
+
+{
+    "data": "erem era ana", 
+    "message": "ok", 
+    "status": 200
+}
+```
+
 *Linux*
 
 Same commands, just directly execute the `cbot` script without the need to
