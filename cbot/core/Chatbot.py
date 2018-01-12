@@ -10,9 +10,9 @@ ACTION_EXIT = 3
 
 LINES = {}
 RESPONSES = {}
-with open('../resources/lines.json', 'r') as infile:
+with open('cbot/resources/lines.json', 'r') as infile:
     LINES = json.load(infile)
-with open('../resources/responses.json', 'r') as infile:
+with open('cbot/resources/responses.json', 'r') as infile:
     RESPONSES = json.load(infile)
 
 
