@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         let urlSlice = e.url.toString().substr(0,10);
-        if(urlSlice.indexOf('login')!==-1){
+        if(urlSlice.indexOf('login')!==-1 || urlSlice.indexOf('register')!==-1){
          this.isLoggedIn= true;
       
         }

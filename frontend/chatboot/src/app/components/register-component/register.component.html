@@ -1,0 +1,68 @@
+<div class="container">
+        <div class="col-lg-2 hidden-sm hidden-md bookshelf">
+            <img src="../../../assets/svg-images/bookshelf.svg">
+            <img src="../../../assets/svg-images/doctor-animation.gif" id="doctor">
+        </div>
+        <div class="col-md-2 col-sm-12 login-container">
+            <div class="title-container">
+                <h1 class="main-title">Bine ai venit!</h1>
+                <h3 class="subtitle">Hai sa facem cunostinta!</h3>
+            </div>
+    
+            <div class="login-form">
+                <div class="back-card"></div>
+                <div class="front-card">
+                    <form class="card-container" id="form">
+                        <div class="inputs">
+                            <div class="input-container">
+                                    <input type="text" id="lastName" name="lastName" required/>
+                                    <label for="lastName">Nume</label>
+                                    <div class="bar"></div>
+                            </div>
+                            <div class="input-container">
+                                    <input type="text" id="firstName" name="firstName" required/>
+                                    <label for="firstName">Prenume</label>
+                                    <div class="bar"></div>
+                            </div>
+                            <div class="input-container">
+                                    <input type="text" id="username" name="username" required/>
+                                    <label for="username">Utilizator</label>
+                                    <div class="bar"></div>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" id="password" name="password" required="required"/>
+                                <label for="password">Parola</label>
+                                <div class="bar"></div>
+                            </div>
+
+                            <div class="dropdowns">
+                                <li class="faculty"><a href="#" >Facultate</a>
+                                    <ul>
+                                        <li><a href="#">UMF</a></li>
+                                        <li><a href="#">Informatica</a></li>
+                                        <li><a href="#">Altceva</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="year"><a href="#" >Anul</a>
+                                    <ul>
+                                        <li><a href="#">I</a></li>
+                                        <li><a href="#">II</a></li>
+                                        <li><a href="#">III</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <button type="submit" value="Submit" form="form" (click) = "redirectOnLogin()">Inregistrare</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-2 hidden-sm hidden-md pictures">
+            <img src="../../../assets/svg-images/pictures.svg">
+        </div>
+    </div>
