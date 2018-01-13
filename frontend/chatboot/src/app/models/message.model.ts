@@ -7,8 +7,4 @@ export class Message{
         this.user = _user;
     }
 
-//    public constructor(object:any){
-//      this.text = object.text;
-//      this.user = object.user;
-//    }
 }

@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register-component/register.comp
 import { ButtonsModule } from 'ngx-bootstrap';
 import { MessageComponent } from './components/message-component/message.component';
 import { ChatroomMessageListService } from './components/chatroom-component/chatroom-message-list.service'
+import { ChatService } from './components/chatroom-component/chatroom-socket.service'
 
 @NgModule({
   /*declaram componentele facute*/
@@ -35,7 +36,7 @@ import { ChatroomMessageListService } from './components/chatroom-component/chat
     ButtonsModule.forRoot()
   ],
   /* aici vom declara serviciile*/
-  providers: [ChatroomMessageListService],
+  providers: [ChatroomMessageListService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

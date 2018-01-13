@@ -1,53 +1,52 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, OnDestroy } from '@angular/core';
 import { MessageComponent } from '../message-component/message.component';
 import { ChatroomMessageListService } from './chatroom-message-list.service';
 import { Message } from '../../models/message.model';
+import { ChatService } from './chatroom-socket.service';
 
 
 @Component({
   selector: 'app-chatroom',
   templateUrl: './chatroom.component.html',
   styleUrls: ['./chatroom.component.scss'],
-  providers: [ChatroomMessageListService]
+  providers: [ChatService, ChatroomMessageListService]
 })
 
-export class ChatroomComponent implements OnChanges, OnInit{
-  private message: Message;
-  private question: Message;
-  private answer: Message;
-  private textValue: string;
-  private messageBot: Array<string>;
+export class ChatroomComponent implements OnChanges, OnInit, OnDestory{
 
-  ngOnInit() {
+  private
+  connection;
+  message:Message;
+
+  constructor(private chatService: ChatService, private messageListService: ChatroomMessageListService) { }
+
+  addMessage() {
+    this.message.user = 'user'
+    this.chatService.sendMessage(this.message.text);
+    this.message.text = '';
+    this.messageListService.addMessage(this.message);
     this.messageListService.getMessageList();
-  }
 
-  constructor(private messageListService: ChatroomMessageListService){}
+   this.connection = this.chatService.getMessages().subscribe(message => {
+    this.message.user ="bot";
+    this.messageListService.addMessage(message);
+    this.messageListService.getMessageList();
+    });
+  }
 
   ngOnChanges(): void {
     this.messageListService.getMessageList();
   }
 
-  retrieveData(responseData : any){
-      this.textValue = responseData.data;
+  ngOnInit() {
+    this.connection = this.chatService.getMessages().subscribe(message => {
+    this.message.user ="bot";
+    this.messageListService.add(message);
+    this.messageListService.getMessageList();
+    });
   }
 
-   showError() {
-       console.log("Failed to retrieve data from server.")
-   }
-  public addMessage(): void {
-    this.question = new Message(this.textValue, "user");
-    this.textValue = "";
-    this.messageListService.addMessage(this.question);
-    this.messageListService.getMessageList();
-
-    this.messageListService.retrieveMessageFromBot(this.question.text)
-      .subscribe(
-        (data) => this.retrieveData(data),
-        (err) => this.showError());
-
-    this.answer = new Message(this.textValue, "bot");
-    this.messageListService.addMessage(this.answer);
-    this.messageListService.getMessageList();
+  ngOnDestroy() {
+    this.connection.unsubscribe();
   }
 }
