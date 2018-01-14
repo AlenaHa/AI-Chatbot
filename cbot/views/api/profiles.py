@@ -1,9 +1,6 @@
 """API exposing extracted profiles data."""
 
 
-from flask_restful import request
-
-from cbot import schemas, settings, utils
 from cbot.views.api import base
 
 

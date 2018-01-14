@@ -1,13 +1,23 @@
+import sqlalchemy
 from sqlalchemy import *
-##from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
+
 
 db_string = 'postgresql://postgres:admin@localhost:5432/ai-database'
 db = create_engine(db_string)
 
 Base = declarative_base()
+
+
+def connect(user='postgres', password='admin', db='AI-database',
+            host='localhost', port=5432):
+    url = 'postgresql://{}:{}@{}:{}/{}'
+    url = url.format(user, password, host, port, db)
+    connection = sqlalchemy.create_engine(url, client_encoding='utf8')
+    metadata = sqlalchemy.MetaData(bind=connection, reflect=True)
+    return connection, metadata
 
 
 class UserCred(Base):
