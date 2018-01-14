@@ -146,7 +146,7 @@ Now install the necessary pip packages and create your first virtual environment
 Use `workon cbot` command to activate the virtual environment every time you
 want to work through it and `deactivate` for leaving it.
 
-#### Install requirements and develop:
+#### Install requirements, develop and test:
 
 ```bash
 $ pip install -Ur requirements.txt

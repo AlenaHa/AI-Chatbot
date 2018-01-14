@@ -12,11 +12,7 @@ log = utils.get_logger(__name__)
 
 
 def run_func(_):
-    cbot.app.run(
-        host=cbot.HOST,
-        port=cbot.PORT,
-        threaded=True
-    )
+    cbot.run_server()
 
 
 def crawl_func(args):

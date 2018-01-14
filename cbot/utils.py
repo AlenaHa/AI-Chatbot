@@ -26,6 +26,11 @@ def get_secret_key():
     return hashlib.sha256(key).digest()
 
 
+def get_res(name):
+    path = os.path.join(settings.RES, name)
+    return read(path)
+
+
 def get_logger(name, use_logging=settings.LOGGING, debug=settings.DEBUG):
     """Obtain a logger object given a name."""
     log = logging.getLogger(name)

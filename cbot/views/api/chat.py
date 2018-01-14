@@ -1,19 +1,19 @@
 """API exposing extracted profiles data."""
 
 
-from flask_restful import request, abort
+from flask_restful import request
 
-from cbot import schemas, settings, utils
 from cbot.views.api import base
-from cbot.core.Chatbot import Chatbot
+from cbot.core.chatbot import Chatbot
 
 
 URL_PREFIX = "/chat"
 
+bot = Chatbot()
+
 
 class ChatResource(base.BaseResource):
-    def __init__(self):
-        self.bot = Chatbot()
+
     ENDPOINT = "chat"
 
     def get(self):
@@ -21,5 +21,5 @@ class ChatResource(base.BaseResource):
         msg = request.args.get("message")
         if not msg:
             return {"message": "missing 'message' query parameter"}, 400
-        response = self.bot.communicate(msg)
+        response = bot.communicate(msg)
         return {"data": response}
