@@ -7,6 +7,7 @@ from setuptools import find_packages, setup
 
 
 ETC = os.path.join("etc", "cbot")
+RES = os.path.join("res", "cbot")
 
 
 def read(fpath):
@@ -51,5 +52,11 @@ setup(
                 os.path.join(ETC, "secret.key"),
             ]
         ),
+        (
+            RES,
+            list(map(lambda arg: os.path.join(RES, arg),
+                     ["lines.json", "responses.json"]))
+        ),
+
     ],
 )
