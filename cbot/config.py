@@ -30,7 +30,7 @@ class DevelopmentConfig(BaseConfig):
     PROPAGATE_EXCEPTIONS = True
 
 
-class TestingConfig(BaseConfig):
+class TestingConfig(DevelopmentConfig):
 
     """Used when running tests."""
 

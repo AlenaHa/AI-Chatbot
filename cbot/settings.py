@@ -15,6 +15,7 @@ PROJECT = os.path.normpath(
 )
 # Relative paths only.
 ETC = os.path.join("etc", "cbot")
+RES = os.path.join("res", "cbot")
 
 # Crawler parsing and settings.
 HTML_PARSER = "html5lib"
