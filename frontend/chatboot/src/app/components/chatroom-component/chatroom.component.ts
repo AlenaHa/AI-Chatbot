@@ -20,7 +20,7 @@ export class ChatroomComponent implements OnChanges, OnInit, OnDestory{
 
   constructor(private chatService: ChatService, private messageListService: ChatroomMessageListService) { }
 
-  addMessage() {
+  chat() {
     this.message.user = 'user'
     this.chatService.sendMessage(this.message.text);
     this.message.text = '';
