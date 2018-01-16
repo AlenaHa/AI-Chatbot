@@ -9,14 +9,14 @@ export class ChatService {
   private socket;
 
   sendMessage(message) {
-    this.socket.emit('add-message', message);
+    this.socket.emit('chat', message);
     console.log("MESSAGE SENT");
   }
 
   getMessages() {
     let observable = new Observable(observer => {
       this.socket = io(this.url);
-      this.socket.on('message', (data) => {
+      this.socket.on('chat', (data) => {
         observer.next(data);
       });
       return () => {

@@ -12,7 +12,7 @@ import { ChatService } from './chatroom-socket.service';
   providers: [ChatService, ChatroomMessageListService]
 })
 
-export class ChatroomComponent implements OnChanges, OnInit, OnDestory{
+export class ChatroomComponent implements OnChanges, OnInit{
 
   private
   connection;
@@ -41,7 +41,7 @@ export class ChatroomComponent implements OnChanges, OnInit, OnDestory{
   ngOnInit() {
     this.connection = this.chatService.getMessages().subscribe(message => {
     this.message.user ="bot";
-    this.messageListService.add(message);
+    this.messageListService.addMessage(message);
     this.messageListService.getMessageList();
     });
   }
