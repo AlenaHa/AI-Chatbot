@@ -13,6 +13,7 @@ export class ChatroomMessageListService {
 
   public addMessage(message: any): void {
     this.messageList.push(message);
+    this.messageList = this.messageList.slice();
   }
 
 }
