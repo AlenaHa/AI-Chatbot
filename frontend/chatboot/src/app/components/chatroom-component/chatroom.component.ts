@@ -34,6 +34,12 @@ export class ChatroomComponent implements OnChanges, OnInit{
     this.messageListService.getMessageList();
   }
 
+  handleKeyDown($event):void {
+    if(event.keyCode == 13) {
+      this.chat();
+    }
+  }
+
   ngOnChanges(): void {
       this.messageListService.getMessageList();
   }
