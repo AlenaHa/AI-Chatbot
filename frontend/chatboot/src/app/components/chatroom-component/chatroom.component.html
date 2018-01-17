@@ -15,7 +15,7 @@
   </div>
  </div>
     <div class="write-message">
-      <input class="write" type="text" [(ngModel)]="textValue" placeholder="Scrie un mesaj...">
+      <input class="write" type="text" [(ngModel)]="textValue" placeholder="Scrie un mesaj..." (keydown)="handleKeyDown($event)">
       <img class="icon" src="../../../assets/svg-images/send-button.svg" (click)="chat()">
     </div>
 
