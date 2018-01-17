@@ -6,10 +6,6 @@ export class ChatService {
   private url = 'http://localhost:8080';
   private socket;
 
-  connect(){
-   this.socket = io(this.url);
-  }
-
   sendMessage(message) {
     this.socket.emit('chat', message);
     console.log("MESSAGE SENT");
@@ -17,6 +13,7 @@ export class ChatService {
 
   getMessages() {
     let observable = new Observable(observer => {
+      this.socket = io(this.url);
       this.socket.on('chat', (data) => {
         observer.next(data);
       });

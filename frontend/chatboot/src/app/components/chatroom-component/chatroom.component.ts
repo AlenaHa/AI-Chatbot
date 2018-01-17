@@ -13,27 +13,25 @@ import { ChatService } from './chatroom-socket.service';
 })
 
 export class ChatroomComponent implements OnChanges, OnInit{
-
   private connection;
   private message:Message;
   private textValue: string;
 
-  constructor(private chatService: ChatService, private messageListService: ChatroomMessageListService) { }
+  constructor(private chatService: ChatService, private messageListService: ChatroomMessageListService) {
+        this.connection = this.chatService.getMessages().subscribe(msg => {
+        var msgString = msg.toString();
+        this.message = new Message(msgString, "bot");
+        this.messageListService.addMessage(this.message);
+        this.messageListService.getMessageList();
+    });
+  }
 
   chat() {
-
-    this.message = new Message(this.textValue, "user");
+    this.message = new Message(this.textValue, "human");
     this.chatService.sendMessage(this.message.text);
     this.messageListService.addMessage(this.message);
+    this.textValue ="";
     this.messageListService.getMessageList();
-
-    this.connection = this.chatService.getMessages().subscribe(msg => {
-      var msgString = msg.toString();
-      this.message = new Message(msgString, "bot");
-    });
-      this.messageListService.addMessage(this.message.text);
-      this.messageListService.getMessageList();
-
   }
 
   ngOnChanges(): void {
@@ -41,7 +39,6 @@ export class ChatroomComponent implements OnChanges, OnInit{
   }
 
   ngOnInit() {
-     this.connection = this.chatService.connect();
   }
 
   ngOnDestroy() {

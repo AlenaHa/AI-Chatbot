@@ -13,13 +13,10 @@
         [index]="i">
       </app-message>
   </div>
-
+ </div>
     <div class="write-message">
       <input class="write" type="text" [(ngModel)]="textValue" placeholder="Scrie un mesaj...">
-      <div class="send" (click)="chat()">
-        <img src="../../../assets/svg-images/send-button.svg">
-      </div>
+      <img class="icon" src="../../../assets/svg-images/send-button.svg" (click)="chat()">
     </div>
 
-  </div>
 </div>
