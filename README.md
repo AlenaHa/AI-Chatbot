@@ -148,6 +148,14 @@ want to work through it and `deactivate` for leaving it.
 
 #### Install requirements, develop and test:
 
+Don't forget to uninstall the package first (if installed):
+
+```bash
+$ pip uninstall cbot
+```
+
+Then:
+
 ```bash
 $ pip install -Ur requirements.txt
 $ python setup.py develop
@@ -161,7 +169,7 @@ Don't forget to run with `sudo -H` if you're working outside the virtualenv.
 ```bash
 $ nosetests
 $ cd doc && make html
-$ cd _build/html && python -m SimpleHTTPServer
+$ cd build/html && python -m SimpleHTTPServer
 ```
 
 Enter http://localhost:8000 to view documentation.

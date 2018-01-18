@@ -11,8 +11,11 @@ import functools32
 from cbot import settings
 
 
-def read(fpath):
-    with open(os.path.join(settings.PROJECT, fpath)) as stream:
+def read(fpath, content=True):
+    abspath = os.path.join(settings.PROJECT, fpath)
+    if not content:
+        return abspath
+    with open(abspath) as stream:
         return stream.read()
 
 
@@ -26,9 +29,19 @@ def get_secret_key():
     return hashlib.sha256(key).digest()
 
 
-def get_res(name):
+def get_res(name, content=True):
+    """Return a resource path or content by giving a relative `name`.
+
+    :argument str name: relative name of the resource
+    :keyword bool content: return the content if `True`, otherwise the absolute path
+
+    >>> utils.get_res("training-data/ai.yml", content=False)
+    '/home/cmin/Repos/AI-Chatbot/res/cbot/training-data/ai.yml'
+    >>> utils.get_res("training-data/ai.yml")
+    'categorii:...'
+    """
     path = os.path.join(settings.RES, name)
-    return read(path)
+    return read(path, content=content)
 
 
 def get_logger(name, use_logging=settings.LOGGING, debug=settings.DEBUG):
