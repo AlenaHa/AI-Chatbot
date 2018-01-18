@@ -3,8 +3,8 @@
   <img src="../../../assets/svg-images/doctor-animation.gif" id="doctor">
 </div>
 
-<div class="chatbot-container col-md-8 col-sm-12">
-  <div class="chatboot-container">
+<div class="chatbot-container col-md-8 col-sm-12" #container1 [scrollTop]="container1.scrollHeight">
+  <div class="chatboot-container" #container2 [scrollTop]="container2.scrollHeight">
 
   <div class="chat" *ngFor="let message of messageListService.messageList; let i = index" [attr.data-index]="i">
       <app-message
@@ -13,13 +13,10 @@
         [index]="i">
       </app-message>
   </div>
-
+ </div>
     <div class="write-message">
-      <input class="write" type="text" [(ngModel)]="textValue" placeholder="Scrie un mesaj...">
-      <div class="send" (click)="addMessage()">
-        <img src="../../../assets/svg-images/send-button.svg">
-      </div>
+      <input class="write" type="text" [(ngModel)]="textValue" placeholder="Scrie un mesaj..." (keydown)="handleKeyDown($event)">
+      <img class="icon" src="../../../assets/svg-images/send-button.svg" (click)="chat()">
     </div>
 
-  </div>
 </div>
