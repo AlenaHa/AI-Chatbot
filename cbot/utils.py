@@ -32,9 +32,8 @@ def get_secret_key():
 def get_res(name, content=True):
     """Return a resource path or content by giving a relative `name`.
 
-    :arg str name: relative name of the resource
-    :key bool content: return the content if `True`, otherwise the
-    absolute path
+    :argument str name: relative name of the resource
+    :keyword bool content: return the content if `True`, otherwise the absolute path
 
     >>> utils.get_res("training-data/ai.yml", content=False)
     '/home/cmin/Repos/AI-Chatbot/res/cbot/training-data/ai.yml'
