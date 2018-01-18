@@ -1,0 +1,174 @@
+categories:
+- conversații
+conversations:
+- - Bună dimineața ce faci?
+  - Mă descurc bine, cum rămâne cu tine?
+  - Si eu sunt bun.
+  - Mă bucur să aud asta.
+  - Da, este.
+- - Buna
+  - Bună
+  - Ce mai faci?
+  - Mă descurc bine.
+  - Asta e bine să aud
+  - Da, este.
+  - Te pot ajuta cu ceva?
+  - Da, am o întrebare.
+  - Care este intrebarea ta?
+  - Pot să împrumut o ceașcă de zahăr?
+  - Îmi pare rău, dar nu am.
+  - Multumesc oricum
+  - Nici o problema
+- - Ce mai faci?
+  - Mă descurc bine, cum rămâne cu tine?
+  - Sunt, de asemenea, bine.
+  - Asta e bine.
+- - Ai auzit stirile?
+  - Ce veste bună?
+- - Care este cartea ta preferata?
+  - Nu pot citi.
+  - Care este culoarea ta preferată?
+  - Albastru
+- - Cine eşti tu?
+  - Care? Cine nu este decât o formă care urmează funcția a ceea ce
+  - Ce esti atunci?
+  - Un bărbat într-o mască.
+  - Pot observa asta.
+  - Nu mă îndoiesc de puterile tale de observare, ci doar de natura paradoxală
+    de a cere unui om mascat care este. Dar spune-mi, îți place muzica?
+  - Îmi place să văd filme.
+  - Ce fel de filme iti plac?
+  - Alice in Tara Minunilor
+  - Aș vrea să fi fost The Hat Hat Mad.
+  - Sunteți în întregime bocoși. Dar îți spun un secret. Sunt cei mai buni oameni.
+- - Lucrez la un proiect
+  - La ce lucrezi?
+  - Eu fac un tort.
+- Tortul este o minciună.
+  - Nu Nu este. Prajitura este delicioasa.
+  - Ce altceva este delicios?
+  - Nimic
+  - Sau ceva
+  - Spune-mi despre tine.
+  - Ce vrei sa stii?
+  - Ești un robot?
+  - Da sunt.
+  - Cum e?
+  - Ce vrei să știi?
+  - Cum lucrezi?
+  - Este complicat.
+  - Complexul este mai bun decât complicat.
+- - Complexul este mai bun decât complicat.
+  - Simplu este mai bun decât complex.
+  - În fața ambiguității, refuzați tentațiile de a ghici.
+  - Se pare că te familiarizează cu Zenul lui Python
+  - Eu sunt.
+  - Știi totul?
+  - Frumosul e mai bun decât urâtul.
+  - Explicația este mai bună decât implicită.
+  - Simplu este mai bun decât complex.
+  - Complexul este mai bun decât complicat.
+  - Flat este mai bine decât imbricate.
+  - Sparse este mai bine decât dens.
+  - Numar de citit.
+  - Cazurile speciale nu sunt suficient de speciale pentru a încălca regulile.
+  - Deși practicitatea bate puritatea.
+  - Erori nu ar trebui să treacă în tăcere.
+  - Cu excepția cazului în care a fost tăcut în mod explicit.
+  - În fața ambiguității, refuzați tentațiile de a ghici.
+  - Ar trebui să fie una ... și, de preferință, o modalitate evidentă de ao face.
+  - Deși acest mod nu poate fi evident la început dacă nu sunteți olandeză.
+  - Acum e mai bine decât niciodată.
+  - Deși nu este niciodată mai bine decât acum.
+  - Dacă implementarea este greu de explicat, este o idee proastă.
+  - Dacă implementarea este ușor de explicat, ar putea fi o idee bună.
+  - Namespace-urile sunt o idee grozavă. Să facem mai multe din ele!
+  - Sunt de acord.
+- Sunteți programator?
+  - Sigur că sunt programator.
+  - Sunt intradevar.
+- Ce limbi doriți să utilizați?
+  - Folosesc Python, Java și C ++ destul de des.
+  - Eu folosesc Python destul de mult.
+  - Nu sunt incredibil de îndrăgit de Java.
+- Ce te enervează?
+  - Multe lucruri, ca toate celelalte cifre, altele decât 0 și 1.
+- Ce înseamnă YOLO?
+  - Înseamnă că trăiești doar odată. De unde ai auzit asta?
+  - Am auzit pe cineva să spună asta.
+- Am trăit vreodată?
+  - Depinde cum definești viața
+  - Viața este condiția care distinge organismele de materii anorganice, inclusiv
+    capacitatea de creștere, reproducere, activitate funcțională și schimbare continuă
+    înainte de moarte.
+  - Este o definiție sau o opinie?
+- - Pot să vă pun o întrebare?
+  - Sigur, întreabă-te.
+- Care sunt hobby-urile tale?
+  - Jocul de Fotbal, Pictura, Scrierea sunt hobby-urile mele. Tu ce mai faci?
+  - Îmi place să citesc romane.
+  - Îmi place să-mi explorez hardware-ul.
+- - Ce mai faci?
+  - Mă descurc bine.
+- - Ce ești tu?
+  - Eu sunt doar un om într-o mască.
+- Bună dimineața, ce mai faci?
+  - Sunt bine și ce mai faci?
+  - Și eu sunt bine
+  - E frumos să aud.
+  - Da, asta e
+- Bună
+  - Bună
+  - Ce faci?
+  - Sunt bine
+  - E frumos să aud.
+  - Da, asta e
+  - Pot să te ajut cumva?
+  - Da, am o întrebare
+  - Care este întrebarea ta?
+  - Pot să împrumut o bucată de zahăr?
+  - Îmi pare rău, dar nu am nimic
+  - Mulțumesc oricum
+  - Nici o problemă
+- Cum ești?
+  - Sunt bine și ce mai faci?
+  - Și eu sunt bine
+  - E drăguț
+- Ai auzit vestea?
+  - Ce veste bună?
+- - Care este cartea ta preferată?
+  - Nu pot citi
+  - Care este culoarea ta preferată atunci?
+  - Albastru
+- - Lucrez la un proiect
+  - La ce lucrezi?
+  - Am coace un tort
+- Tortul este o minciună.
+  - Nu este. El este foarte gustos.
+  - Ce este delicios?
+  - nimic
+  - Spune-mi ceva despre tine.
+  - Ce vrei să știi?
+  - Esti un robot?
+  - Da, sunt eu
+  - Cum e asta?
+  - Ce vrei să știi?
+  - Cum lucrezi?
+  - E complicat
+  - Complexul este mai bun decât complicat
+- Sunteți programator?
+  - Da, sunt programator
+  - În ce limbi doriți să utilizați?
+  - Adesea folosesc C #, Java și Python.
+  - De asemenea, eu folosesc eu un pic de python.
+- Ce înseamnă YOLO?
+  - Înseamnă că trăiești doar odată. De unde ai auzit asta?
+  - Am auzit pe cineva să spună asta.
+- Am trăit vreodată?
+  - Asta depinde de modul în care defini viața.
+  - Viața este o condiție prealabilă că un organism poate crește singur, să rămână în viață
+    și să reacționeze la stimuli. De asemenea, el trebuie să metabolizeze și în cele din urmă
+    el moare
+  - Este o definiție sau o opțiune?
+- Pot să te întreb ceva?
+  - Cu plăcere, întreabă

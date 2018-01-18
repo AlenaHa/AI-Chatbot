@@ -6,4 +6,5 @@ export class Message{
         this.text = _text;
         this.user = _user;
     }
+
 }
