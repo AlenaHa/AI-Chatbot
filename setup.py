@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 
+import itertools
 import os
 
 from setuptools import find_packages, setup
@@ -30,6 +31,15 @@ def get_requirements(path="requirements.txt"):
     return lines
 
 
+def discover_data(root):
+    for dirpath, dirnames, filenames in os.walk(root):
+        paths = []
+        for name in filenames:
+            path = os.path.join(dirpath, name)
+            paths.append(path)
+        yield dirpath, paths
+
+
 setup(
     name="cbot",
     version="0.1.0",
@@ -45,18 +55,5 @@ setup(
     zip_safe=False,
     install_requires=get_requirements(),
     test_suite="tests",
-    data_files=[
-        (
-            ETC,
-            [
-                os.path.join(ETC, "secret.key"),
-            ]
-        ),
-        (
-            RES,
-            list(map(lambda arg: os.path.join(RES, arg),
-                     ["lines.json", "responses.json"]))
-        ),
-
-    ],
+    data_files=itertools.chain(*map(discover_data, (ETC, RES))),
 )
