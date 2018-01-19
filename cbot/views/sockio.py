@@ -23,7 +23,6 @@ def chat_message(message):
     """
 
     word = ans.figure_word(message)
-    print(word)
     if word:
         response = ans.get_answer(word) or answer.Answer.NO_ANSWER
     else:
