@@ -3,13 +3,14 @@
 
 from flask_socketio import emit
 
-from cbot import sio
-from cbot.core import chatbot
+from cbot import settings, sio
+from cbot.core import answer, chatbot
 
 
 CHAT = "chat"
 TIMEOUT = 1    # we should return a result under this timeout (seconds)
 
+ans = answer.Answer(settings.DEF_NAMES)
 bot = chatbot.Chatbot()
 
 
@@ -20,6 +21,13 @@ def chat_message(message):
 
     :returns: True if reply succeeded, False otherwise
     """
-    response = bot.communicate(message)
+
+    word = ans.figure_word(message)
+    print(word)
+    if word:
+        response = ans.get_answer(word) or answer.Answer.NO_ANSWER
+    else:
+        response = bot.communicate(message)
+
     emit(CHAT, response)
     return True

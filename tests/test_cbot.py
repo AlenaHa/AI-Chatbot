@@ -54,7 +54,7 @@ class TestChatbot(BaseTest):
     def tearDown(self):
         self.sio.disconnect()
 
-    def _test_chat(self, msg):
+    def _test_chat(self, msg, response=None):
         # Send message with callback.
         self.sio.emit(CHAT_EVENT, msg, callback=self._chat_callback)
         # Wait for the callbacks/events triggering.
@@ -63,9 +63,19 @@ class TestChatbot(BaseTest):
         self.assertEqual(True, self._status)
         self.assertEqual(unicode, type(self._message))
         self.assertGreater(len(self._message), 0)
+        if response:
+            print(self._message)
+            self.assertTrue(self._message.startswith(response))
 
     def test_chat_hello(self):
         self._test_chat("Salut!")
+
+    def test_chat_questions(self):
+        tests = [
+            ("ce este aia inima?", "organ muscular cavitar situat in")
+        ]
+        for question, answer in tests:
+            self._test_chat(question, response=answer)
 
 
 if __name__ == "__main__":
