@@ -41,6 +41,8 @@ def get_res(name, content=True):
     'categorii:...'
     """
     path = os.path.join(settings.RES, name)
+    if not content:
+        return path
     return read(path, content=content)
 
 
