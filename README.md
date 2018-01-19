@@ -172,9 +172,28 @@ $ cd doc && make html
 $ cd build/html && python -m SimpleHTTPServer
 ```
 
-Enter http://localhost:8000 to view documentation.
+#### Start the client side
+
+In order to run the client, node must be installed. For this you must first go to 
+(https://nodejs.org/en/download/)
+and download the node distribution for your OS.
+ ***
+ 
+Next step is to _install the latest version of _NPM using the following command:
+ 
+```bash
+$ npm install npm@latest -g
+```
+*** 
+Now you must run the following command into the folder frontend/chatbot:
+```bash
+$ npm install
+$ npm start
+```
+## Now the application should be up and running.
 
 ----
+Enter http://localhost:8000 to view documentation.
 
 * Source: https://github.com/AlenaHa/AI-Chatbot.git
 * License: MIT
