@@ -8,7 +8,6 @@ from cbot.core.answer import Answer
 from cbot.core.chatbot import Chatbot
 from cbot.views.api import base
 
-
 URL_PREFIX = "/chat"
 
 ans = Answer(settings.DEF_NAMES)
@@ -25,10 +24,6 @@ class ChatResource(base.BaseResource):
         if not msg:
             return {"message": "missing 'message' query parameter"}, 400
 
-        word = ans.figure_word(msg)
-        if word:
-            response = ans.get_answer(word) or Answer.NO_ANSWER
-        else:
-            response = bot.communicate(msg)
+        response = bot.communicate(msg)
 
         return {"data": response}
